@@ -1,6 +1,12 @@
 {
   "name": "brayan-cristancho-portfolio",
   "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://brayancristancho.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brayan-Camilo-Cristancho/portfolio.git"
+  },
   "description": "Personal portfolio of Brayan Cristancho, DevOps Engineer. React, TypeScript and a serverless contact API on Vercel.",
   "author": "Brayan Camilo Cristancho Franco",
   "private": true,

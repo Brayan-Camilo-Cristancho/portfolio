@@ -7,6 +7,9 @@
 [![Node.js](https://img.shields.io/badge/Node.js-22-5FA04E?logo=nodedotjs&logoColor=white)](https://nodejs.org)
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com)
 [![Cloudflare Turnstile](https://img.shields.io/badge/Bot_protection-Turnstile-F38020?logo=cloudflare&logoColor=white)](https://www.cloudflare.com/products/turnstile/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+**Live site: [brayancristancho.vercel.app](https://brayancristancho.vercel.app)**
 
 My personal site as a DevOps engineer. It presents my experience, projects and services,
 and doubles as a small engineering project in its own right: a typed React application,
@@ -140,3 +143,9 @@ starfield, the contact flow, accessibility and performance trade-offs) is writte
 
 - LinkedIn: [brayan-camilo-cristancho-franco](https://www.linkedin.com/in/brayan-camilo-cristancho-franco-714a94202/)
 - Email: brayan.cristanchof@gmail.com
+
+## License
+
+The source code is released under the [MIT License](LICENSE). The personal content (texts,
+CV, experience and project descriptions) is not covered by that license and may not be
+reused without permission.
