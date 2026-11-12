@@ -78,9 +78,7 @@ export function Astronaut({ className }: { className?: string }) {
       />
       <rect x="35.5" y="69.5" width="4" height="5" rx="1" fill={seam} />
 
-      {/* Life-support pack: body, top cap, vents and a short antenna */}
-      <path d="M80 46 L 83 36" stroke={dark} strokeWidth="1.3" strokeLinecap="round" />
-      <circle cx="83.2" cy="35.4" r="1.3" fill="#38bdf8" />
+      {/* Life-support pack: body, top cap and vents */}
       <rect x="38" y="44" width="46" height="48" rx="7" fill={`url(#${id}-pack)`} />
       <rect x="38" y="44" width="46" height="5" rx="2.5" fill={dark} />
       <g stroke={shade} strokeWidth="1.4" strokeLinecap="round">
@@ -254,6 +252,11 @@ export function Astronaut({ className }: { className?: string }) {
       <rect x="33.4" y="86" width="11.2" height="4.8" rx="2.4" fill={mid} />
       <rect x="33.4" y="86" width="11.2" height="1.6" rx="0.8" fill={lit} />
 
+      {/* Helmet antenna, behind the shell */}
+      <path d="M51 25 L 46.5 13.5" stroke={dark} strokeWidth="1.8" strokeLinecap="round" />
+      <circle cx="46" cy="12.3" r="2.2" fill="#38bdf8" />
+      <circle cx="45.4" cy="11.7" r="0.7" fill="#e0f2fe" />
+
       {/* Helmet: neck ring, shell, shade, lights, visor */}
       <rect x="45" y="52" width="32" height="7" rx="3.5" fill={mid} />
       <rect x="45" y="52" width="32" height="2.2" rx="1.1" fill={lit} />
@@ -316,13 +319,10 @@ export function Astronaut({ className }: { className?: string }) {
         <path d="M82.4 71.4 L 80.6 66.8" stroke="#fff" strokeWidth="1.4" opacity="0.45" />
         <path d="M93.7 75.6 L 90.4 66.4" stroke={shade} strokeWidth="2" opacity="0.3" />
       </g>
-      <circle cx="75" cy="62" r="5.8" fill="none" stroke={dark} strokeWidth="1.2" opacity="0.8" />
       <g stroke={dark} strokeWidth="1.1" strokeLinecap="round" opacity="0.75">
         <path d="M78.5 72.5 L 85.5 65.5" />
         <path d="M83.2 74.8 L 93.6 70.8" />
       </g>
-      <ellipse cx="90.4" cy="77.6" rx="3.8" ry="3.2" fill={mid} stroke={seam} strokeWidth="0.6" />
-      <ellipse cx="89.6" cy="76.8" rx="1.7" ry="1" fill={lit} opacity="0.8" />
 
       {/* Right glove, palm toward the viewer. Thumb and index finger are separate, the
           other three fingers form one block: reads clearly even at small sizes. */}
