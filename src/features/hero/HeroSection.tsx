@@ -36,8 +36,8 @@ export function HeroSection() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className="flex flex-col gap-5"
           >
-            <div aria-hidden className="min-[90rem]:hidden">
-              <Astronaut className="animate-drift w-24 drop-shadow-[0_0_24px_rgb(56_189_248/0.3)] sm:w-28 lg:w-32" />
+            <div aria-hidden className="2xl:hidden">
+              <Astronaut className="animate-drift w-32 drop-shadow-[0_0_24px_rgb(56_189_248/0.3)] sm:w-36 lg:w-44" />
             </div>
             <Badge tone="success" dot className="w-fit">
               {t('hero.available')}

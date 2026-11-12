@@ -14,7 +14,7 @@ export function Planets() {
         className="animate-float-slow absolute top-[21rem] left-[43%] hidden w-44 opacity-90 lg:block"
       />
       {/* Sits right before the text column: container edge + padding - own width - gap. */}
-      <Astronaut className="animate-drift absolute top-20 left-[calc((100%-72rem)/2+1.5rem-var(--w)-1.25rem)] hidden w-(--w) drop-shadow-[0_0_28px_rgb(56_189_248/0.3)] [--w:9rem] min-[90rem]:block 2xl:[--w:11rem]" />
+      <Astronaut className="animate-drift absolute top-20 left-[calc((100%-72rem)/2+1.5rem-var(--w)-1.25rem)] hidden w-(--w) drop-shadow-[0_0_28px_rgb(56_189_248/0.3)] [--w:12rem] 2xl:block min-[110rem]:[--w:15rem]" />
     </>
   );
 }
