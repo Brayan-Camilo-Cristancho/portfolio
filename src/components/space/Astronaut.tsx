@@ -223,13 +223,10 @@ export function Astronaut({ className }: { className?: string }) {
         <path d="M43.4 63.2 L 35.2 78.6" stroke="#fff" strokeWidth="1.4" opacity="0.45" />
         <path d="M42.6 81 L 43.4 88.6" stroke={shade} strokeWidth="2" opacity="0.3" />
       </g>
-      <circle cx="47" cy="62" r="5.8" fill="none" stroke={mid} strokeWidth="1.2" />
       <g stroke={dark} strokeWidth="1.1" strokeLinecap="round" opacity="0.75">
         <path d="M37.6 66.8 L 46.4 71.4" />
         <path d="M34.4 84.6 L 43.8 84" />
       </g>
-      <ellipse cx="38.2" cy="79" rx="4" ry="3.2" fill={mid} stroke={seam} strokeWidth="0.6" />
-      <ellipse cx="37.4" cy="78.2" rx="1.8" ry="1" fill={lit} opacity="0.8" />
       {/* Left glove, relaxed: closed fingers seen from the back, thumb toward the body */}
       <path
         d="M34.6 90.4 L 43.6 90.4 C 44.6 93 44.6 96.5 43 98.6 C 41.6 100.4 37.6 100.6 35.8 99 C 34.2 97.4 33.9 93.6 34.6 90.4 Z"
@@ -253,9 +250,9 @@ export function Astronaut({ className }: { className?: string }) {
       <rect x="33.4" y="86" width="11.2" height="1.6" rx="0.8" fill={lit} />
 
       {/* Helmet antenna, behind the shell */}
-      <path d="M51 25 L 46.5 13.5" stroke={dark} strokeWidth="1.8" strokeLinecap="round" />
-      <circle cx="46" cy="12.3" r="2.2" fill="#38bdf8" />
-      <circle cx="45.4" cy="11.7" r="0.7" fill="#e0f2fe" />
+      <path d="M61 22 L 61 15.5" stroke={dark} strokeWidth="1.4" strokeLinecap="round" />
+      <circle cx="61" cy="14.6" r="1.6" fill="#38bdf8" />
+      <circle cx="60.6" cy="14.2" r="0.5" fill="#e0f2fe" />
 
       {/* Helmet: neck ring, shell, shade, lights, visor */}
       <rect x="45" y="52" width="32" height="7" rx="3.5" fill={mid} />
