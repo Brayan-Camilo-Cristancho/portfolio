@@ -1,0 +1,6 @@
+{
+  // "Solution file": no compila nada por sí mismo, solo referencia los dos proyectos.
+  // El código del navegador (app) y el de Node (vite.config) tienen entornos distintos.
+  "files": [],
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+}

@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "home": "Ir al inicio",
+    "sections": "Secciones",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "top": "Inicio"
+  },
+  "a11y": {
+    "skipToContent": "Saltar al contenido",
+    "newTab": "se abre en una pestaña nueva"
+  },
+  "language": {
+    "label": "Idioma"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "available": "Disponible para nuevos proyectos",
+    "techLabel": "Tecnologías principales",
+    "cta": {
+      "contact": "Hablemos",
+      "cv": "Descargar CV"
+    },
+    "techCount_one": "{{count}} tecnología",
+    "techCount_other": "{{count}} tecnologías"
+  },
+  "sections": {
+    "about": {
+      "title": "Sobre mí",
+      "certifications": "Certificaciones destacadas",
+      "inProgress": "en curso",
+      "neo": {
+        "uptime_one": "{{count}} año en tecnología",
+        "uptime_other": "{{count}} años en tecnología",
+        "langs": "español (nativo) · english (B1)"
+      },
+      "focus": {
+        "cicd": "CI/CD y automatización de procesos",
+        "k8s": "Kubernetes, contenedores y observabilidad",
+        "cloud": "Nube (AWS, Azure) y on-premise"
+      },
+      "cols": {
+        "perms": "Permisos",
+        "issuer": "Emisor",
+        "date": "Fecha",
+        "name": "Certificación"
+      },
+      "showAll_one": "ver la {{count}}",
+      "showAll_other": "ver las {{count}}",
+      "showFeatured": "solo destacadas"
+    },
+    "skills": {
+      "title": "Habilidades",
+      "description": "Mi stack organizado como el ciclo DevOps. Elige una etapa para ver sus herramientas.",
+      "tablist": "Etapas del ciclo DevOps",
+      "summary": "{{skills}} tecnologías · {{stages}} etapas",
+      "stages": {
+        "development": {
+          "short": "código",
+          "desc": "Construyo las aplicaciones que luego despliego: frontend, APIs y bases de datos."
+        },
+        "automation": {
+          "short": "automatizar",
+          "desc": "Scripts y herramientas que convierten tareas manuales en un solo comando."
+        },
+        "cicd": {
+          "short": "ci/cd",
+          "desc": "Pipelines que llevan cada commit de forma segura hasta producción."
+        },
+        "containers": {
+          "short": "contenedores",
+          "desc": "Empaqueto y orquesto servicios para que corran igual en cualquier entorno."
+        },
+        "os": {
+          "short": "infra",
+          "desc": "La base de todo: servidores Linux, virtualización y proxies."
+        },
+        "cloud": {
+          "short": "nube",
+          "desc": "Infraestructura en la nube pública, del aprovisionamiento a la operación."
+        },
+        "observability": {
+          "short": "observar",
+          "desc": "Métricas, dashboards y alertas: el feedback que cierra el ciclo."
+        }
+      }
+    },
+    "projects": {
+      "title": "Proyectos destacados",
+      "description": "Cada proyecto: el problema, la solución y su impacto medible."
+    },
+    "services": {
+      "title": "Servicios",
+      "description": "Cómo puedo ayudar a tu equipo, de la infraestructura al código."
+    },
+    "experience": {
+      "title": "Experiencia",
+      "present": "Actualidad"
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "¿Tienes un proyecto o una vacante? Escríbeme y conversemos.",
+      "email": "Enviar correo"
+    }
+  },
+  "project": {
+    "stack": "Tecnologías",
+    "viewRepo": "Ver repositorio",
+    "passed": "passed",
+    "pipeline": "Etapas del proyecto",
+    "stages": {
+      "problem": "problema",
+      "solution": "solución",
+      "impact": "impacto"
+    },
+    "before": "Antes",
+    "after": "Después",
+    "noMetrics": "Proyecto de aprendizaje continuo: el impacto es el dominio de la plataforma, documentado paso a paso en el repositorio.",
+    "showMetrics": "Ver métricas",
+    "showDetails": "Ver detalles",
+    "backToSummary": "Volver al resumen"
+  },
+  "footer": {
+    "built": "Hecho con React, TypeScript y Tailwind · Desplegado con CI/CD"
+  },
+  "terminal": {
+    "title": "brayan@portfolio — terminal interactiva",
+    "inputLabel": "Escribe un comando y presiona Enter",
+    "welcome": "Bienvenido. Escribe help para ver los comandos (Tab autocompleta, ↑ historial).",
+    "try": "Prueba:",
+    "notFound": "comando no encontrado: {{cmd}}. Escribe help para ver los disponibles.",
+    "projectsHint": "Más detalle: cd projects",
+    "sudo": "Permiso denegado: este portafolio corre con privilegios mínimos 😉",
+    "commands": {
+      "help": "Muestra los comandos disponibles",
+      "whoami": "Quién soy",
+      "skills": "Tecnologías por categoría",
+      "projects": "Proyectos y su impacto",
+      "contact": "Cómo contactarme",
+      "cd": "Ir a una sección (cd projects)",
+      "lang": "Cambiar idioma (lang en)",
+      "clear": "Limpiar la pantalla"
+    },
+    "cd": {
+      "ok": "→ navegando a #{{id}}",
+      "usage": "uso: cd <sección>. Disponibles: {{list}}"
+    },
+    "lang": {
+      "ok": "Idioma cambiado a español.",
+      "current": "Idioma actual: {{lng}}. Uso: lang es | lang en"
+    }
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "error": "No existe el archivo o el directorio",
+    "back": "cd ~ (ir al inicio)"
+  },
+  "rail": {
+    "label": "Progreso por secciones",
+    "status": {
+      "passed": "recorrida",
+      "running": "en curso",
+      "pending": "pendiente"
+    },
+    "success": "listo para desplegar 🚀"
+  },
+  "backToTop": "Volver arriba",
+  "contact": {
+    "formTitle": "Formulario de contacto",
+    "directTitle": "O por canal directo",
+    "directText": "Si prefieres, escríbeme por correo o LinkedIn. Respondo en menos de 48 horas.",
+    "labels": {
+      "name": "Nombre",
+      "email": "Correo",
+      "message": "Mensaje"
+    },
+    "placeholders": {
+      "name": "Tu nombre",
+      "email": "tu@correo.com",
+      "message": "Cuéntame sobre tu proyecto, vacante o idea…"
+    },
+    "submit": "Enviar mensaje",
+    "sending": "Enviando…",
+    "success": "200 OK · Mensaje enviado. Te responderé pronto.",
+    "successSimulated": "200 OK · Simulación local: el mensaje se validó pero no se envió (falta RESEND_API_KEY).",
+    "errors": {
+      "name": {
+        "tooShort": "Escribe al menos 2 caracteres.",
+        "tooLong": "Máximo 80 caracteres."
+      },
+      "email": {
+        "invalid": "Revisa el formato del correo."
+      },
+      "message": {
+        "tooShort": "Cuéntame un poco más (mínimo 20 caracteres).",
+        "tooLong": "Máximo 2000 caracteres."
+      },
+      "turnstile": {
+        "missing": "Completa la verificación de seguridad.",
+        "failed": "No se pudo cargar la verificación de seguridad. Recarga la página o escríbeme por correo."
+      },
+      "spam": "No se pudo enviar."
+    },
+    "status": {
+      "validation": "Revisa los campos marcados.",
+      "turnstile": "La verificación de seguridad falló. Inténtalo de nuevo.",
+      "rate_limited": "Has enviado varios mensajes seguidos. Espera unos minutos.",
+      "send_failed": "No se pudo enviar el mensaje. Escríbeme por correo.",
+      "bad_request": "Solicitud no válida.",
+      "network": "Sin conexión con el servidor. Revisa tu red e inténtalo de nuevo."
+    }
+  }
+}

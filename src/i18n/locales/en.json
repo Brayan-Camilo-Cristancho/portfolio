@@ -1,0 +1,219 @@
+{
+  "nav": {
+    "home": "Go to top",
+    "sections": "Sections",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "services": "Services",
+    "experience": "Experience",
+    "contact": "Contact",
+    "top": "Home"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "newTab": "opens in a new tab"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "available": "Available for new projects",
+    "techLabel": "Core technologies",
+    "cta": {
+      "contact": "Let's talk",
+      "cv": "Download CV"
+    },
+    "techCount_one": "{{count}} technology",
+    "techCount_other": "{{count}} technologies"
+  },
+  "sections": {
+    "about": {
+      "title": "About me",
+      "certifications": "Featured certifications",
+      "inProgress": "in progress",
+      "neo": {
+        "uptime_one": "{{count}} year in tech",
+        "uptime_other": "{{count}} years in tech",
+        "langs": "spanish (native) · english (B1)"
+      },
+      "focus": {
+        "cicd": "CI/CD and process automation",
+        "k8s": "Kubernetes, containers and observability",
+        "cloud": "Cloud (AWS, Azure) and on-premise"
+      },
+      "cols": {
+        "perms": "Permissions",
+        "issuer": "Issuer",
+        "date": "Date",
+        "name": "Certification"
+      },
+      "showAll_one": "show {{count}}",
+      "showAll_other": "show all {{count}}",
+      "showFeatured": "featured only"
+    },
+    "skills": {
+      "title": "Skills",
+      "description": "My stack organized as the DevOps loop. Pick a stage to see its tools.",
+      "tablist": "DevOps loop stages",
+      "summary": "{{skills}} technologies · {{stages}} stages",
+      "stages": {
+        "development": {
+          "short": "code",
+          "desc": "I build the apps I later deploy: frontends, APIs and databases."
+        },
+        "automation": {
+          "short": "automate",
+          "desc": "Scripts and tools that turn manual tasks into a single command."
+        },
+        "cicd": {
+          "short": "ci/cd",
+          "desc": "Pipelines that take every commit safely to production."
+        },
+        "containers": {
+          "short": "containers",
+          "desc": "I package and orchestrate services so they run the same anywhere."
+        },
+        "os": {
+          "short": "infra",
+          "desc": "The foundation: Linux servers, virtualization and proxies."
+        },
+        "cloud": {
+          "short": "cloud",
+          "desc": "Public cloud infrastructure, from provisioning to operations."
+        },
+        "observability": {
+          "short": "observe",
+          "desc": "Metrics, dashboards and alerts: the feedback that closes the loop."
+        }
+      }
+    },
+    "projects": {
+      "title": "Featured projects",
+      "description": "Each project: the problem, the solution and its measurable impact."
+    },
+    "services": {
+      "title": "Services",
+      "description": "How I can help your team, from infrastructure to code."
+    },
+    "experience": {
+      "title": "Experience",
+      "present": "Present"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Got a project or an opening? Drop me a line.",
+      "email": "Send email"
+    }
+  },
+  "project": {
+    "stack": "Technologies",
+    "viewRepo": "View repository",
+    "passed": "passed",
+    "pipeline": "Project stages",
+    "stages": {
+      "problem": "problem",
+      "solution": "solution",
+      "impact": "impact"
+    },
+    "before": "Before",
+    "after": "After",
+    "noMetrics": "Continuous-learning project: the impact is mastery of the platform, documented step by step in the repository.",
+    "showMetrics": "Show metrics",
+    "showDetails": "Show details",
+    "backToSummary": "Back to summary"
+  },
+  "footer": {
+    "built": "Built with React, TypeScript & Tailwind · Shipped with CI/CD"
+  },
+  "terminal": {
+    "title": "brayan@portfolio — interactive terminal",
+    "inputLabel": "Type a command and press Enter",
+    "welcome": "Welcome. Type help to list commands (Tab completes, ↑ history).",
+    "try": "Try:",
+    "notFound": "command not found: {{cmd}}. Type help to list available commands.",
+    "projectsHint": "More detail: cd projects",
+    "sudo": "Permission denied: this portfolio runs with least privilege 😉",
+    "commands": {
+      "help": "List available commands",
+      "whoami": "Who I am",
+      "skills": "Technologies by category",
+      "projects": "Projects and their impact",
+      "contact": "How to reach me",
+      "cd": "Go to a section (cd projects)",
+      "lang": "Switch language (lang es)",
+      "clear": "Clear the screen"
+    },
+    "cd": {
+      "ok": "→ navigating to #{{id}}",
+      "usage": "usage: cd <section>. Available: {{list}}"
+    },
+    "lang": {
+      "ok": "Language switched to English.",
+      "current": "Current language: {{lng}}. Usage: lang es | lang en"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "error": "No such file or directory",
+    "back": "cd ~ (go home)"
+  },
+  "rail": {
+    "label": "Section progress",
+    "status": {
+      "passed": "visited",
+      "running": "current",
+      "pending": "upcoming"
+    },
+    "success": "ready to deploy 🚀"
+  },
+  "backToTop": "Back to top",
+  "contact": {
+    "formTitle": "Contact form",
+    "directTitle": "Or reach me directly",
+    "directText": "If you prefer, email me or message me on LinkedIn. I reply within 48 hours.",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "placeholders": {
+      "name": "Your name",
+      "email": "you@email.com",
+      "message": "Tell me about your project, opening or idea…"
+    },
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "200 OK · Message sent. I will get back to you soon.",
+    "successSimulated": "200 OK · Local simulation: the message was validated but not sent (RESEND_API_KEY missing).",
+    "errors": {
+      "name": {
+        "tooShort": "Use at least 2 characters.",
+        "tooLong": "80 characters max."
+      },
+      "email": {
+        "invalid": "Check the email format."
+      },
+      "message": {
+        "tooShort": "Tell me a bit more (20 characters min).",
+        "tooLong": "2000 characters max."
+      },
+      "turnstile": {
+        "missing": "Complete the security check.",
+        "failed": "The security check could not load. Reload the page or email me."
+      },
+      "spam": "Could not send."
+    },
+    "status": {
+      "validation": "Check the highlighted fields.",
+      "turnstile": "The security check failed. Please try again.",
+      "rate_limited": "You sent several messages in a row. Please wait a few minutes.",
+      "send_failed": "The message could not be sent. Please email me.",
+      "bad_request": "Invalid request.",
+      "network": "Could not reach the server. Check your connection and try again."
+    }
+  }
+}
