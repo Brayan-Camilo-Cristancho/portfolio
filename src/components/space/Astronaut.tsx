@@ -202,9 +202,27 @@ export function Astronaut({ className }: { className?: string }) {
         <path d="M35.8 73.7 L 44.2 78.3" />
         <path d="M34.6 76.4 L 43 81" />
       </g>
-      <rect x="33.5" y="86" width="11" height="4" rx="2" fill={mid} />
-      <circle cx="39" cy="93" r="5" fill={dark} />
-      <path d="M36 91 Q 39 89.5 42 91" fill="none" stroke={mid} strokeWidth="0.8" opacity="0.7" />
+      {/* Left glove, relaxed: closed fingers seen from the back, thumb toward the body */}
+      <path
+        d="M34.6 90.4 L 43.6 90.4 C 44.6 93 44.6 96.5 43 98.6 C 41.6 100.4 37.6 100.6 35.8 99 C 34.2 97.4 33.9 93.6 34.6 90.4 Z"
+        fill={`url(#${id}-glove)`}
+        stroke={seam}
+        strokeWidth="0.6"
+        strokeLinejoin="round"
+      />
+      <g fill="none" stroke={seam} strokeWidth="0.55" strokeLinecap="round" opacity="0.7">
+        <path d="M35.2 94.6 Q 39 95.8 43.9 94.6" />
+        <path d="M35.8 97.4 Q 39 98.4 43 97.4" />
+      </g>
+      <path
+        d="M42.6 91.6 C 45.6 92 46.4 95 44.6 96.8 C 43.8 97.6 42.6 97 42.6 96 Z"
+        fill={`url(#${id}-glove)`}
+        stroke={seam}
+        strokeWidth="0.55"
+        strokeLinejoin="round"
+      />
+      <rect x="33.4" y="86" width="11.2" height="4.8" rx="2.4" fill={mid} />
+      <rect x="33.4" y="86" width="11.2" height="1.6" rx="0.8" fill={lit} />
 
       {/* Helmet: neck ring, shell, shade, lights, visor */}
       <rect x="45" y="52" width="32" height="7" rx="3.5" fill={mid} />
@@ -268,32 +286,41 @@ export function Astronaut({ className }: { className?: string }) {
         <path d="M81.5 72.5 L 91 71" />
         <path d="M81.2 75.2 L 90.8 73.8" />
       </g>
-      <rect x="78.5" y="62.5" width="13" height="5" rx="2.5" fill={mid} />
-      <rect x="78.5" y="62.5" width="13" height="1.6" rx="0.8" fill={lit} />
-      <g fill={`url(#${id}-glove)`}>
-        <rect x="77.6" y="47" width="3.6" height="10" rx="1.8" />
-        <rect x="81.4" y="46" width="3.6" height="11" rx="1.8" />
-        <rect x="85.2" y="46.5" width="3.6" height="10.5" rx="1.8" />
-        <rect x="89" y="48.5" width="3.4" height="9" rx="1.7" />
-        <rect x="73" y="53" width="4" height="9" rx="2" transform="rotate(-30 75 57.5)" />
-        <rect x="77.5" y="52" width="15" height="12" rx="5" />
-      </g>
-      {/* Finger joints and palm pad */}
-      <g stroke={seam} strokeWidth="0.7" strokeLinecap="round" opacity="0.6">
-        <path d="M78.4 50.5 L 80.4 50.5" />
-        <path d="M82.2 49.5 L 84.2 49.5" />
-        <path d="M86 50 L 88 50" />
-        <path d="M89.8 51.5 L 91.6 51.5" />
-      </g>
-      <rect x="80.5" y="55" width="9" height="6" rx="2.5" fill={dark} opacity="0.35" />
+      {/* Right glove, palm toward the viewer: one silhouette with separated fingers */}
       <path
-        d="M80 58 Q 85 60.5 90 58"
+        d="M78.6 63.5 L 77.7 58.2 C 76.1 57.4 74.6 56 73.6 54.1 A 1.6 1.6 0 0 1 76.3 52.4 L 78.2 54.8 L 78.2 47.2 A 1.7 1.7 0 0 1 81.6 47.2 L 81.6 52.6 L 82.1 52.6 L 82.1 46.2 A 1.7 1.7 0 0 1 85.5 46.2 L 85.5 52.6 L 86 52.6 L 86 46.8 A 1.65 1.65 0 0 1 89.3 46.8 L 89.3 53 L 89.8 53 L 89.8 48.8 A 1.4 1.4 0 0 1 92.6 48.8 L 92.6 57.2 C 92.6 61.2 91 63.5 88 63.5 Z"
+        fill={`url(#${id}-glove)`}
+        stroke={seam}
+        strokeWidth="0.6"
+        strokeLinejoin="round"
+      />
+      {/* Finger joints, knuckle pads, palm pad and thumb crease */}
+      <g fill="none" stroke={seam} strokeWidth="0.6" strokeLinecap="round" opacity="0.7">
+        <path d="M78.6 50.4 Q 79.9 51 81.2 50.4" />
+        <path d="M82.5 49.4 Q 83.8 50 85.1 49.4" />
+        <path d="M86.4 49.9 Q 87.65 50.5 88.9 49.9" />
+        <path d="M90.1 51.6 Q 91.2 52.1 92.3 51.6" />
+        <path d="M76.2 55.6 Q 77.6 57.2 79.4 57.6" />
+      </g>
+      <g fill={dark} opacity="0.45">
+        <rect x="78.8" y="47.6" width="2.2" height="1.6" rx="0.8" />
+        <rect x="82.7" y="46.6" width="2.2" height="1.6" rx="0.8" />
+        <rect x="86.6" y="47.2" width="2.1" height="1.6" rx="0.8" />
+        <rect x="90.2" y="49.2" width="2" height="1.5" rx="0.75" />
+      </g>
+      <rect x="80.2" y="55.4" width="10" height="5.6" rx="2.6" fill={dark} opacity="0.35" />
+      <path
+        d="M81.2 58.3 Q 85.2 60 89.2 58.3"
         fill="none"
         stroke={seam}
-        strokeWidth="0.9"
+        strokeWidth="0.6"
         strokeLinecap="round"
         opacity="0.6"
       />
+      {/* Wrist cuff over the glove */}
+      <rect x="77.8" y="62.4" width="14.4" height="5.4" rx="2.6" fill={mid} />
+      <rect x="77.8" y="62.4" width="14.4" height="1.7" rx="0.85" fill={lit} />
+      <rect x="83.2" y="64.6" width="3.6" height="1.6" rx="0.8" fill="#38bdf8" opacity="0.8" />
     </svg>
   );
 }
