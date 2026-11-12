@@ -103,21 +103,58 @@ export function Astronaut({ className }: { className?: string }) {
       </g>
       <rect x="66.5" y="99" width="6" height="5" rx="1" fill={dark} opacity="0.55" />
 
-      {/* Boots with sole and tread */}
-      <rect x="45" y="118" width="15" height="9" rx="3" fill={dark} />
-      <rect x="63" y="118" width="15" height="9" rx="3" fill={seam} />
-      <rect x="45" y="118" width="15" height="2" rx="1" fill={mid} opacity="0.6" />
-      <rect x="63" y="118" width="15" height="2" rx="1" fill={dark} opacity="0.6" />
-      <rect x="45" y="125" width="15" height="2.5" rx="1.2" fill={seam} />
-      <rect x="63" y="125" width="15" height="2.5" rx="1.2" fill={deep} />
-      <g stroke={deep} strokeWidth="0.8" opacity="0.8">
-        <path d="M49 125 L 49 127.5" />
-        <path d="M53 125 L 53 127.5" />
-        <path d="M57 125 L 57 127.5" />
-        <path d="M67 125 L 67 127.5" />
-        <path d="M71 125 L 71 127.5" />
-        <path d="M75 125 L 75 127.5" />
+      {/* Boots: shaft, toe pointing outward, toe cap, strap, ankle ring and treaded sole.
+          The right boot mirrors the left one (x' = 123.2 - x). */}
+      <path
+        d="M46.4 116 L 59 116 L 59.6 126.2 L 43 126.2 C 40.6 126.2 40 123.4 42 122.2 L 46.2 120.4 Z"
+        fill={dark}
+        stroke={seam}
+        strokeWidth="0.6"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M42 122.2 L 46.2 120.4 L 47.6 126.2 L 43 126.2 C 40.6 126.2 40 123.4 42 122.2 Z"
+        fill={mid}
+        opacity="0.55"
+      />
+      <path
+        d="M76.8 116 L 64.2 116 L 63.6 126.2 L 80.2 126.2 C 82.6 126.2 83.2 123.4 81.2 122.2 L 77 120.4 Z"
+        fill={seam}
+        stroke={deep}
+        strokeWidth="0.6"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M81.2 122.2 L 77 120.4 L 75.6 126.2 L 80.2 126.2 C 82.6 126.2 83.2 123.4 81.2 122.2 Z"
+        fill={dark}
+        opacity="0.55"
+      />
+      <g stroke={deep} strokeWidth="0.8" strokeLinecap="round" opacity="0.8">
+        <path d="M48 120.2 L 58.6 120.2" />
+        <path d="M64.6 120.2 L 75.2 120.2" />
       </g>
+      <path
+        d="M42.4 126 L 59.8 126 L 59.8 127.6 C 59.8 128.4 59.2 129 58.4 129 L 43.2 129 C 41.6 129 41 127.4 42.4 126 Z"
+        fill={seam}
+      />
+      <path
+        d="M80.8 126 L 63.4 126 L 63.4 127.6 C 63.4 128.4 64 129 64.8 129 L 80 129 C 81.6 129 82.2 127.4 80.8 126 Z"
+        fill={deep}
+      />
+      <g stroke={shade} strokeWidth="0.8" opacity="0.9">
+        <path d="M46 127.3 L 46 128.8" />
+        <path d="M50 127.3 L 50 128.8" />
+        <path d="M54 127.3 L 54 128.8" />
+        <path d="M58 127.3 L 58 128.8" />
+        <path d="M65.2 127.3 L 65.2 128.8" />
+        <path d="M69.2 127.3 L 69.2 128.8" />
+        <path d="M73.2 127.3 L 73.2 128.8" />
+        <path d="M77.2 127.3 L 77.2 128.8" />
+      </g>
+      <rect x="45.8" y="114.8" width="13.8" height="3.4" rx="1.7" fill={mid} />
+      <rect x="45.8" y="114.8" width="13.8" height="1.2" rx="0.6" fill={lit} />
+      <rect x="63.6" y="114.8" width="13.8" height="3.4" rx="1.7" fill={dark} />
+      <rect x="63.6" y="114.8" width="13.8" height="1.2" rx="0.6" fill={mid} />
 
       {/* Torso: shell, shade, centre seam, waist ring */}
       <rect x="45" y="56" width="32" height="36" rx="8" fill={`url(#${id}-torso)`} />
@@ -179,29 +216,22 @@ export function Astronaut({ className }: { className?: string }) {
       <circle cx="69" cy="83" r="2.4" fill={`url(#${id}-accent)`} />
       <path d="M67.4 83.6 L 69 81.6 L 70.6 83.6" fill="none" stroke="#fff" strokeWidth="0.6" />
 
-      {/* Left arm, relaxed */}
-      <path
-        d="M47 62 L 38 79 L 39 92"
-        fill="none"
-        stroke={lit}
-        strokeWidth="11"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M51 64.5 L 42.5 80 L 43.5 89"
-        fill="none"
-        stroke={dark}
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        opacity="0.4"
-      />
-      <circle cx="47" cy="62" r="5.8" fill="none" stroke={mid} strokeWidth="1.2" />
-      <g stroke={dark} strokeWidth="1.2" strokeLinecap="round" opacity="0.75">
-        <path d="M35.8 73.7 L 44.2 78.3" />
-        <path d="M34.6 76.4 L 43 81" />
+      {/* Left arm, relaxed. A wider seam-coloured stroke underneath acts as the outline
+          that separates the sleeve from the torso. */}
+      <g fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M47 62 L 38 79 L 39 90" stroke={seam} strokeWidth="12.4" />
+        <path d="M47 62 L 38 79" stroke={lit} strokeWidth="11" />
+        <path d="M38 79 L 39 90" stroke={mid} strokeWidth="10.4" />
+        <path d="M43.4 63.2 L 35.2 78.6" stroke="#fff" strokeWidth="1.4" opacity="0.45" />
+        <path d="M42.6 81 L 43.4 88.6" stroke={shade} strokeWidth="2" opacity="0.3" />
       </g>
+      <circle cx="47" cy="62" r="5.8" fill="none" stroke={mid} strokeWidth="1.2" />
+      <g stroke={dark} strokeWidth="1.1" strokeLinecap="round" opacity="0.75">
+        <path d="M37.6 66.8 L 46.4 71.4" />
+        <path d="M34.4 84.6 L 43.8 84" />
+      </g>
+      <ellipse cx="38.2" cy="79" rx="4" ry="3.2" fill={mid} stroke={seam} strokeWidth="0.6" />
+      <ellipse cx="37.4" cy="78.2" rx="1.8" ry="1" fill={lit} opacity="0.8" />
       {/* Left glove, relaxed: closed fingers seen from the back, thumb toward the body */}
       <path
         d="M34.6 90.4 L 43.6 90.4 C 44.6 93 44.6 96.5 43 98.6 C 41.6 100.4 37.6 100.6 35.8 99 C 34.2 97.4 33.9 93.6 34.6 90.4 Z"
@@ -276,47 +306,47 @@ export function Astronaut({ className }: { className?: string }) {
       />
 
       {/* Right arm, hand raised toward the viewer */}
+      {/* Upper arm out to the side, forearm up in front of it */}
       <g fill="none" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M75 62 L 87 79" stroke={mid} strokeWidth="11" />
-        <path d="M87 79 L 85 68" stroke={lit} strokeWidth="12.5" />
-        <path d="M80 60 L 90.5 75" stroke={shade} strokeWidth="2.2" opacity="0.3" />
+        <path d="M75 62 L 90 77" stroke={seam} strokeWidth="12.4" />
+        <path d="M75 62 L 90 77" stroke={mid} strokeWidth="11" />
+        <path d="M72 65.2 L 86.6 80" stroke={shade} strokeWidth="2" opacity="0.3" />
+        <path d="M90 77 L 86 66.5" stroke={seam} strokeWidth="13.4" />
+        <path d="M90 77 L 86 66.5" stroke={lit} strokeWidth="12" />
+        <path d="M82.4 71.4 L 80.6 66.8" stroke="#fff" strokeWidth="1.4" opacity="0.45" />
+        <path d="M93.7 75.6 L 90.4 66.4" stroke={shade} strokeWidth="2" opacity="0.3" />
       </g>
       <circle cx="75" cy="62" r="5.8" fill="none" stroke={dark} strokeWidth="1.2" opacity="0.8" />
-      <g stroke={dark} strokeWidth="1.2" strokeLinecap="round" opacity="0.75">
-        <path d="M81.5 72.5 L 91 71" />
-        <path d="M81.2 75.2 L 90.8 73.8" />
+      <g stroke={dark} strokeWidth="1.1" strokeLinecap="round" opacity="0.75">
+        <path d="M78.5 72.5 L 85.5 65.5" />
+        <path d="M83.2 74.8 L 93.6 70.8" />
       </g>
-      {/* Right glove, palm toward the viewer: one silhouette with separated fingers */}
+      <ellipse cx="90.4" cy="77.6" rx="3.8" ry="3.2" fill={mid} stroke={seam} strokeWidth="0.6" />
+      <ellipse cx="89.6" cy="76.8" rx="1.7" ry="1" fill={lit} opacity="0.8" />
+
+      {/* Right glove, palm toward the viewer. Thumb and index finger are separate, the
+          other three fingers form one block: reads clearly even at small sizes. */}
       <path
-        d="M78.6 63.5 L 77.7 58.2 C 76.1 57.4 74.6 56 73.6 54.1 A 1.6 1.6 0 0 1 76.3 52.4 L 78.2 54.8 L 78.2 47.2 A 1.7 1.7 0 0 1 81.6 47.2 L 81.6 52.6 L 82.1 52.6 L 82.1 46.2 A 1.7 1.7 0 0 1 85.5 46.2 L 85.5 52.6 L 86 52.6 L 86 46.8 A 1.65 1.65 0 0 1 89.3 46.8 L 89.3 53 L 89.8 53 L 89.8 48.8 A 1.4 1.4 0 0 1 92.6 48.8 L 92.6 57.2 C 92.6 61.2 91 63.5 88 63.5 Z"
+        d="M79.2 63.6 L 78.4 58.4 C 76.8 57.8 75.2 56.4 74.2 54.6 C 73.4 53.2 74.8 51.6 76.2 52.4 L 78.4 54.4 L 78.4 49.2 C 78.4 46.8 82 46.8 82 49.2 L 82 53.2 L 82.6 53.2 L 82.6 48.4 C 82.6 46.6 85.6 46.2 86 47.8 C 86.4 46.4 89.2 46.6 89.4 48.2 C 89.8 47.6 92.4 48 92.4 50 L 92.4 57.4 C 92.4 61.4 90.6 63.6 87.6 63.6 Z"
         fill={`url(#${id}-glove)`}
         stroke={seam}
-        strokeWidth="0.6"
+        strokeWidth="0.7"
         strokeLinejoin="round"
       />
-      {/* Finger joints, knuckle pads, palm pad and thumb crease */}
-      <g fill="none" stroke={seam} strokeWidth="0.6" strokeLinecap="round" opacity="0.7">
-        <path d="M78.6 50.4 Q 79.9 51 81.2 50.4" />
-        <path d="M82.5 49.4 Q 83.8 50 85.1 49.4" />
-        <path d="M86.4 49.9 Q 87.65 50.5 88.9 49.9" />
-        <path d="M90.1 51.6 Q 91.2 52.1 92.3 51.6" />
-        <path d="M76.2 55.6 Q 77.6 57.2 79.4 57.6" />
+      <g fill="none" stroke={seam} strokeWidth="0.6" strokeLinecap="round" opacity="0.75">
+        <path d="M86 48.6 L 86 52.8" />
+        <path d="M89.4 49 L 89.4 53" />
+        <path d="M78.6 54.2 Q 85.5 55.8 92.2 54" />
+        <path d="M76.6 55.8 Q 78 57.4 79.8 57.8" />
       </g>
-      <g fill={dark} opacity="0.45">
-        <rect x="78.8" y="47.6" width="2.2" height="1.6" rx="0.8" />
-        <rect x="82.7" y="46.6" width="2.2" height="1.6" rx="0.8" />
-        <rect x="86.6" y="47.2" width="2.1" height="1.6" rx="0.8" />
-        <rect x="90.2" y="49.2" width="2" height="1.5" rx="0.75" />
-      </g>
-      <rect x="80.2" y="55.4" width="10" height="5.6" rx="2.6" fill={dark} opacity="0.35" />
       <path
-        d="M81.2 58.3 Q 85.2 60 89.2 58.3"
-        fill="none"
-        stroke={seam}
-        strokeWidth="0.6"
+        d="M79.4 48.8 L 79.4 52.4"
+        stroke="#fff"
+        strokeWidth="0.8"
         strokeLinecap="round"
-        opacity="0.6"
+        opacity="0.4"
       />
+      <rect x="80.4" y="56.4" width="9.6" height="5" rx="2.4" fill={dark} opacity="0.3" />
       {/* Wrist cuff over the glove */}
       <rect x="77.8" y="62.4" width="14.4" height="5.4" rx="2.6" fill={mid} />
       <rect x="77.8" y="62.4" width="14.4" height="1.7" rx="0.85" fill={lit} />
