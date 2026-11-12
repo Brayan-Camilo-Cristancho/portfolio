@@ -25,7 +25,7 @@
     "techLabel": "Tecnologías principales",
     "cta": {
       "contact": "Hablemos",
-      "cv": "Descargar CV"
+      "projects": "Ver proyectos"
     },
     "techCount_one": "{{count}} tecnología",
     "techCount_other": "{{count}} tecnologías"

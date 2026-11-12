@@ -25,7 +25,7 @@
     "techLabel": "Core technologies",
     "cta": {
       "contact": "Let's talk",
-      "cv": "Download CV"
+      "projects": "See projects"
     },
     "techCount_one": "{{count}} technology",
     "techCount_other": "{{count}} technologies"

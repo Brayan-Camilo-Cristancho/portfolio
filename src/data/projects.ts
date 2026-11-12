@@ -1,67 +1,62 @@
 import type { Project } from '@/types/content';
 
 // Every project follows the same shape: problem, solution and measurable impact.
+// Client and employer names are intentionally left out.
+const professional = { es: 'Proyecto profesional', en: 'Professional project' };
+
 export const projects: Project[] = [
   {
     slug: 'devops-metrics-platform',
     featured: true,
     title: {
-      es: 'Plataforma de métricas DevOps',
-      en: 'DevOps Metrics Platform',
+      es: 'Panel de métricas de entrega de software',
+      en: 'Software delivery metrics dashboard',
     },
-    context: { es: 'Banco de Occidente', en: 'Banco de Occidente' },
+    context: professional,
     problem: {
-      es: 'Obtener indicadores de entrega (despliegues por ambiente, tasa de éxito, tiempos, tipos de entregable) exigía consultar Jenkins y GitHub manualmente, sin una vista centralizada para la toma de decisiones.',
-      en: 'Getting delivery indicators (deployments per environment, success rate, timings, deliverable types) required manually querying Jenkins and GitHub, with no centralized view for decision-making.',
+      es: 'Para saber cuántos despliegues se hacían, cuántos fallaban o cuánto tardaban, alguien tenía que revisar a mano Jenkins y GitHub y armar el reporte. Cada consulta tomaba entre 10 y 20 minutos y no había un lugar único donde ver los datos.',
+      en: 'Knowing how many deployments ran, how many failed or how long they took meant someone checking Jenkins and GitHub by hand and putting a report together. Each query took 10 to 20 minutes and there was no single place to see the data.',
     },
     solution: {
-      es: 'Automaticé la extracción de métricas desde las APIs de Jenkins y GitHub, la categorización de entregables (pipelines, repositorios, etc.) y su visualización en un panel con filtros por año, chapter, ambiente y aplicación.',
-      en: 'I automated metric extraction from the Jenkins and GitHub APIs, the categorization of deliverables (pipelines, repositories, etc.) and their visualization in a dashboard filterable by year, chapter, environment and application.',
+      es: 'Un servicio que consulta automáticamente las APIs de Jenkins y GitHub, clasifica cada entregable (pipelines, repositorios, etc.) y alimenta un panel en Power BI con filtros por año, equipo, ambiente y aplicación.',
+      en: 'A service that automatically queries the Jenkins and GitHub APIs, classifies each deliverable (pipelines, repositories, etc.) and feeds a Power BI dashboard filterable by year, team, environment and application.',
     },
     role: { es: 'Diseño e implementación', en: 'Design and implementation' },
     stack: ['Jenkins API', 'GitHub API', 'TypeScript', 'Express', 'Power BI'],
     impact: [
       {
-        label: { es: 'Tiempo por tarea DevOps automatizada', en: 'Time per automated DevOps task' },
-        before: { es: '5–10 min', en: '5–10 min' },
+        label: { es: 'Tiempo para obtener las métricas', en: 'Time to get the metrics' },
+        before: { es: '10–20 min a mano', en: '10–20 min by hand' },
         after: { es: '≈ 1 min', en: '≈ 1 min' },
-        improvement: '-80–90%',
-        minutes: { before: 7.5, after: 1 }, // midpoint of the 5-10 min range
-      },
-      {
-        label: { es: 'Tiempo para obtener métricas', en: 'Time to obtain metrics' },
-        before: { es: '10–20 min manuales', en: '10–20 min manual' },
-        after: { es: '≈ 1 min (panel)', en: '≈ 1 min (dashboard)' },
-        improvement: '-90–95%',
+        improvement: { es: '90% menos tiempo', en: '90% less time' },
         minutes: { before: 15, after: 1 },
       },
     ],
-    // Sin capturas reales: son datos internos del banco.
   },
   {
     slug: 'repo-pipeline-scaffolding',
     featured: true,
     title: {
-      es: 'Aprovisionamiento automático de repositorios y pipelines',
-      en: 'Automated repository & pipeline provisioning',
+      es: 'Creación automática de repositorios y pipelines',
+      en: 'Automated repository and pipeline setup',
     },
-    context: { es: 'Banco de Occidente', en: 'Banco de Occidente' },
+    context: professional,
     problem: {
-      es: 'Crear un repositorio nuevo implicaba configurar a mano GitHub, las ramas según la estrategia de la organización, la estructura de carpetas y los pipelines de cada ambiente: cerca de una hora por proyecto y riesgo de incumplir lineamientos.',
-      en: "Creating a new repository meant manually configuring GitHub, branches per the organization's strategy, folder structure and per-environment pipelines: about an hour per project and a risk of breaking guidelines.",
+      es: 'Cada proyecto nuevo necesitaba su repositorio en GitHub, sus ramas, una estructura de carpetas y un pipeline por ambiente, todo configurado a mano. Tomaba cerca de una hora y era fácil saltarse alguna regla del equipo.',
+      en: 'Every new project needed its GitHub repository, branches, folder structure and one pipeline per environment, all configured by hand. It took about an hour and it was easy to miss one of the team rules.',
     },
     solution: {
-      es: 'Desarrollé en JavaScript una plantilla de autoservicio integrada a Backstage que crea el repositorio en GitHub con sus ramas, la estructura de carpetas y los pipelines por ambiente, según los lineamientos del banco.',
-      en: "I built a JavaScript self-service template integrated into Backstage that creates the GitHub repository with its branches, folder structure and per-environment pipelines, following the bank's guidelines.",
+      es: 'Una plantilla de autoservicio en Backstage, escrita en JavaScript: el desarrollador llena un formulario y obtiene el repositorio listo, con ramas, estructura y pipelines que ya cumplen las reglas.',
+      en: 'A self-service Backstage template written in JavaScript: a developer fills in a form and gets the repository ready, with branches, structure and pipelines that already follow the rules.',
     },
     role: { es: 'Diseño e implementación', en: 'Design and implementation' },
     stack: ['Backstage', 'JavaScript', 'Node.js', 'GitHub'],
     impact: [
       {
-        label: { es: 'Configuración de un repositorio nuevo', en: 'New repository setup' },
+        label: { es: 'Configurar un repositorio nuevo', en: 'Setting up a new repository' },
         before: { es: '≈ 1 hora', en: '≈ 1 hour' },
         after: { es: '2 min', en: '2 min' },
-        improvement: '-97%',
+        improvement: { es: '97% menos tiempo', en: '97% less time' },
         minutes: { before: 60, after: 2 },
       },
     ],
@@ -70,26 +65,26 @@ export const projects: Project[] = [
     slug: 'jenkinsfile-rules-engine',
     featured: true,
     title: {
-      es: 'Motor de reglas para Jenkinsfiles',
-      en: 'Jenkinsfile rules engine',
+      es: 'Cambios masivos en pipelines de Jenkins',
+      en: 'Bulk changes to Jenkins pipelines',
     },
-    context: { es: 'Banco de Occidente', en: 'Banco de Occidente' },
+    context: professional,
     problem: {
-      es: 'Aplicar un cambio a muchos Jenkinsfiles se hacía archivo por archivo: hasta 2 horas de trabajo manual y propenso a inconsistencias.',
-      en: 'Applying a change across many Jenkinsfiles was done file by file: up to 2 hours of manual work and prone to inconsistencies.',
+      es: 'Cuando había que cambiar algo en todos los pipelines (una versión, un paso nuevo), se editaba cada Jenkinsfile uno por uno. Podía tomar hasta 2 horas y siempre quedaba alguno distinto.',
+      en: 'When something had to change in every pipeline (a version, a new step), each Jenkinsfile was edited one by one. It could take up to 2 hours and one of them always ended up different.',
     },
     solution: {
-      es: 'Desarrollé un motor de reglas en Jenkins que aplica cambios masivos a los Jenkinsfiles en unos 5 minutos, sin importar la cantidad de archivos.',
-      en: 'I built a Jenkins rules engine that applies bulk changes to Jenkinsfiles in about 5 minutes, regardless of how many files there are.',
+      es: 'Un motor de reglas en Jenkins: se describe el cambio una sola vez y se aplica a todos los Jenkinsfiles en unos 5 minutos, sin importar cuántos sean.',
+      en: 'A rules engine in Jenkins: the change is described once and applied to every Jenkinsfile in about 5 minutes, however many there are.',
     },
     role: { es: 'Diseño e implementación', en: 'Design and implementation' },
     stack: ['Jenkins', 'TypeScript', 'GitHub'],
     impact: [
       {
-        label: { es: 'Actualización masiva de Jenkinsfiles', en: 'Bulk Jenkinsfile update' },
+        label: { es: 'Actualizar todos los pipelines', en: 'Updating every pipeline' },
         before: { es: 'hasta 2 horas', en: 'up to 2 hours' },
         after: { es: '≈ 5 min', en: '≈ 5 min' },
-        improvement: '-96%',
+        improvement: { es: '96% menos tiempo', en: '96% less time' },
         minutes: { before: 120, after: 5 },
       },
     ],
@@ -98,33 +93,33 @@ export const projects: Project[] = [
     slug: 'deployment-scaffolding-python',
     featured: true,
     title: {
-      es: 'Generador de estructura y pipelines de despliegue',
-      en: 'Deployment structure & pipeline generator',
+      es: 'Generador de proyectos listos para desplegar',
+      en: 'Deploy-ready project generator',
     },
-    context: { es: 'GSE', en: 'GSE' },
+    context: professional,
     problem: {
-      es: 'Montar la estructura de carpetas y los pipelines de despliegue de un proyecto nuevo tomaba hasta una hora, y los pipelines en Bash sin validaciones introducían errores manuales frecuentes.',
-      en: 'Setting up the folder structure and deployment pipelines for a new project took up to an hour, and Bash pipelines without validations introduced frequent manual errors.',
+      es: 'Preparar un proyecto nuevo para desplegarlo (carpetas, scripts y pipelines) tomaba hasta una hora. Además, los scripts de despliegue no validaban nada, así que los errores humanos llegaban hasta los ambientes.',
+      en: 'Getting a new project ready to deploy (folders, scripts and pipelines) took up to an hour. On top of that, the deployment scripts validated nothing, so human mistakes reached the environments.',
     },
     solution: {
-      es: 'Desarrollé una automatización en Python que genera la estructura y los pipelines de despliegue (Azure DevOps), y optimicé los pipelines en Bash con validaciones automáticas.',
-      en: 'I built a Python automation that generates the structure and deployment pipelines (Azure DevOps), and optimized the Bash pipelines with automated validations.',
+      es: 'Una herramienta en Python que genera la estructura y los pipelines de despliegue en Azure DevOps, y validaciones automáticas en los scripts de Bash que detienen el despliegue antes de que un error llegue a un ambiente.',
+      en: 'A Python tool that generates the structure and deployment pipelines in Azure DevOps, plus automated checks in the Bash scripts that stop a deployment before a mistake reaches an environment.',
     },
     role: { es: 'Diseño e implementación', en: 'Design and implementation' },
     stack: ['Python', 'Bash', 'Azure DevOps', 'Linux'],
     impact: [
       {
-        label: { es: 'Montaje de un proyecto nuevo', en: 'New project setup' },
+        label: { es: 'Preparar un proyecto nuevo', en: 'Preparing a new project' },
         before: { es: 'hasta 1 hora', en: 'up to 1 hour' },
         after: { es: '2 min', en: '2 min' },
-        improvement: '-97%',
+        improvement: { es: '97% menos tiempo', en: '97% less time' },
         minutes: { before: 60, after: 2 },
       },
       {
-        label: { es: 'Errores manuales en pipelines', en: 'Manual pipeline errors' },
+        label: { es: 'Errores manuales en despliegues', en: 'Manual deployment errors' },
         before: { es: 'Frecuentes', en: 'Frequent' },
-        after: { es: 'Mínimos', en: 'Minimal' },
-        improvement: '-90%',
+        after: { es: 'Casi ninguno', en: 'Almost none' },
+        improvement: { es: '90% menos errores', en: '90% fewer errors' },
       },
     ],
   },

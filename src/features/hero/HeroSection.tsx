@@ -1,4 +1,4 @@
-import { ArrowRight, Download, MapPin } from 'lucide-react';
+import { ArrowRight, MapPin } from 'lucide-react';
 import { m } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { sectionTo } from '@/app/navigation';
@@ -64,10 +64,8 @@ export function HeroSection() {
                 {t('hero.cta.contact')}
                 <ArrowRight aria-hidden className="size-4" />
               </Button>
-              <Button href={profile.cvPath} download className="w-full sm:w-auto">
-                <Download aria-hidden className="size-4" />
-                {t('hero.cta.cv')}
-                <span className="sr-only"> (PDF)</span>
+              <Button to={sectionTo('projects')} className="w-full sm:w-auto">
+                {t('hero.cta.projects')}
               </Button>
             </div>
           </m.div>

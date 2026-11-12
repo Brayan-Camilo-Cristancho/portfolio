@@ -78,7 +78,7 @@ export const COMMANDS: TerminalCommand[] = [
               <span className="text-success">▸</span>{' '}
               <span className="text-fg">{l(project.title)}</span>
               {project.impact[0] && (
-                <span className="text-success"> ({project.impact[0].improvement})</span>
+                <span className="text-success"> ({l(project.impact[0].improvement)})</span>
               )}
             </li>
           ))}

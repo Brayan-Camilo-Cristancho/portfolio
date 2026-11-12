@@ -52,7 +52,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             <PipelineStages />
             {headline && (
               <p className="flex flex-wrap items-center gap-2 text-sm">
-                <Badge tone="accent">{headline.improvement}</Badge>
+                <Badge tone="accent">{l(headline.improvement)}</Badge>
                 <span className="text-fg-muted">{l(headline.label)}</span>
               </p>
             )}

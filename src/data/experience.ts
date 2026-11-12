@@ -2,7 +2,7 @@ import type { Education, Experience } from '@/types/content';
 
 export const experience: Experience[] = [
   {
-    company: 'GSE',
+    org: { es: 'Empresa de servicios tecnológicos', en: 'Technology services company' },
     role: { es: 'Ingeniero DevOps', en: 'DevOps Engineer' },
     start: '2026-02',
     end: '2026-11',
@@ -37,7 +37,7 @@ export const experience: Experience[] = [
     ],
   },
   {
-    company: 'Banco de Occidente',
+    org: { es: 'Entidad financiera', en: 'Financial institution' },
     role: { es: 'Analista DevOps (profesional en entrenamiento)', en: 'DevOps Analyst (trainee)' },
     start: '2025-07',
     end: '2026-01',
@@ -47,13 +47,13 @@ export const experience: Experience[] = [
         'Plataforma que centraliza las APIs de Jenkins y GitHub en un panel de Power BI: obtener las métricas de DevOps pasó de hasta 20 minutos a 1 minuto.',
         'Plantilla de autoservicio en Backstage que crea repositorios con ramas, estructura y pipelines por ambiente: de 1 hora a 2 minutos.',
         'Motor de reglas en Jenkins que aplica cambios masivos a los Jenkinsfiles en unos 5 minutos (antes hasta 2 horas).',
-        'Despliegues en AWS (ECS, ECR, S3) con los lineamientos de seguridad y trazabilidad del banco, con Scrum y Scrumban.',
+        'Despliegues en AWS (ECS, ECR, S3) siguiendo lineamientos de seguridad y trazabilidad de un entorno regulado, con Scrum y Scrumban.',
       ],
       en: [
         'Platform centralizing the Jenkins and GitHub APIs into a Power BI dashboard: getting DevOps metrics went from up to 20 minutes to 1 minute.',
         'Backstage self-service template that creates repositories with branches, structure and per-environment pipelines: from 1 hour to 2 minutes.',
         'Jenkins rules engine that applies bulk Jenkinsfile changes in about 5 minutes (previously up to 2 hours).',
-        "Deployments on AWS (ECS, ECR, S3) following the bank's security and traceability guidelines, with Scrum and Scrumban.",
+        'Deployments on AWS (ECS, ECR, S3) following the security and traceability guidelines of a regulated environment, with Scrum and Scrumban.',
       ],
     },
     stack: [
@@ -70,7 +70,7 @@ export const experience: Experience[] = [
     ],
   },
   {
-    company: 'Grupo Cubo Ltda',
+    org: { es: 'Consultora de software', en: 'Software consultancy' },
     role: { es: 'Desarrollador Full Stack', en: 'Full Stack Developer' },
     start: '2023-12',
     end: '2025-02',
@@ -106,7 +106,7 @@ export const experience: Experience[] = [
     ],
   },
   {
-    company: 'Freelance',
+    org: { es: 'Independiente', en: 'Freelance' },
     role: { es: 'Desarrollador de software', en: 'Software Developer' },
     start: '2022-01',
     end: '2023-12',

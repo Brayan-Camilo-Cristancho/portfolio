@@ -19,5 +19,4 @@ export const profile: Profile = {
     linkedin: 'https://www.linkedin.com/in/brayan-camilo-cristancho-franco-714a94202/',
     codersrank: 'https://profile.codersrank.io/user/brayan-camilo-cristancho',
   },
-  cvPath: '/cv/brayan-cristancho-cv.pdf',
 };

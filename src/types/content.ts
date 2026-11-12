@@ -10,7 +10,6 @@ export interface Profile {
   location: Localized;
   email: string;
   links: { github: string; linkedin: string; codersrank?: string };
-  cvPath: string;
 }
 
 export type SkillCategoryId =
@@ -32,7 +31,8 @@ export interface ImpactMetric {
   label: Localized;
   before: Localized;
   after: Localized;
-  improvement: string;
+  /** Plain-language result, e.g. "97% less time". */
+  improvement: Localized;
   /** Numeric values in minutes, used to draw the comparison bars. */
   minutes?: { before: number; after: number };
 }
@@ -59,7 +59,8 @@ export interface Service {
 }
 
 export interface Experience {
-  company: string;
+  /** Generic description of the organization; company names are not published. */
+  org: Localized;
   role: Localized;
   start: string;
   end?: string;

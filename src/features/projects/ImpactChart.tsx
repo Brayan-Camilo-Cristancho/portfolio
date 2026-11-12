@@ -29,7 +29,7 @@ export function ImpactChart({ metrics }: { metrics: ImpactMetric[] }) {
           <li key={metric.label.es} className="flex flex-col gap-2.5">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <h4 className="text-fg text-sm font-medium">{l(metric.label)}</h4>
-              <Badge tone="accent">{metric.improvement}</Badge>
+              <Badge tone="accent">{l(metric.improvement)}</Badge>
             </div>
             <dl className="flex flex-col gap-1.5 font-mono text-xs">
               {rows.map((row) => (

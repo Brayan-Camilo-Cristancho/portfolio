@@ -27,7 +27,7 @@ export function ExperienceSection() {
     >
       <ol className="border-border relative ml-2 flex flex-col gap-10 border-l pl-6 sm:ml-3 sm:pl-8">
         {experience.map((job, index) => (
-          <li key={`${job.company}-${job.start}`} className="relative">
+          <li key={`${job.org.en}-${job.start}`} className="relative">
             <span
               aria-hidden
               className={`absolute top-1 -left-[31px] size-3 rounded-full border-2 sm:-left-[39px] ${
@@ -37,7 +37,7 @@ export function ExperienceSection() {
               }`}
             />
             <p aria-hidden className="mb-1.5 font-mono text-xs">
-              <span className="text-nebula">commit {shortHash(job.company + job.start)}</span>
+              <span className="text-nebula">commit {shortHash(job.org.en + job.start)}</span>
               {index === 0 && (
                 <span className="text-fg-muted">
                   {' ('}
@@ -50,7 +50,7 @@ export function ExperienceSection() {
             </p>
             <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
               <h3 className="text-lg font-semibold">
-                {l(job.role)} <span className="text-fg-muted font-normal">· {job.company}</span>
+                {l(job.role)} <span className="text-fg-muted font-normal">· {l(job.org)}</span>
               </h3>
 
               <p className="text-fg-muted shrink-0 font-mono text-sm">
